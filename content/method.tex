@@ -1,0 +1,65 @@
+\section{Method}
+\label{sec:method}
+% data constraints
+For the Galactic halo we consider here the more recent observables, inferred from globular cluster kinematics \citep{2018arXiv180411348W} and tidal stream analysis \citep{2015ApJ...803...80K,2014MNRAS.445.3788G}. For the baryonic matter dominated regime (e.g. $r \sim \SI{1}{\parsec}$ -- $\SI{10}{\kilo\parsec}$) we take into account the rotation curve of \citet{2013PASJ...65..118S}. Note, that in light of the more recent data for the Galactic halo we focus in this dataset only on the radial extent within $\SI{15}{\kilo\parsec}$. Thus, beyond $\SI{15}{\kilo\parsec}$ the observables in Sofue's dataset are ignored. At sub-parsec scales we adopt the core mass $M_{\rm core} = \SI{4.2E6}{\Msun}$, describing a Keplerian trend (e.g. $v(r) \propto r^{-1/2}$) towards the Galactic center. %A summary of all constraints is given in \cref{tbl:constraints}.
+
+% recall theoretical models
+In order to explain the observables along the entire radial extent of the MW ($r \sim \SI{1E-4}{\parsec}$ -- $\SI{100}{\kilo\parsec}$) we recall briefly few known MW components on theoretical ground.
+
+% bulge model
+The bulge structure is characterized by an inner and main bulge, each described by an exponential sphere model, $\rho(r)/\rho_{b} = \e^{-r/R_b}$, with a density scale $\rho_b$ and a length scale $R_b$. The enclosed mass is given by $M(r) = \int_0^r 4\pi r^2 \rho(r) \d r$. The circular velocity is then simply given by \begin{equation}
+	\frac{v^2(r)}{\sigma_b^2} = \frac{M(r)}{M_b} \frac{R_b}{r}
+\end{equation} with $M_b = 4\pi\rho_b R_b^3$ and $\sigma_b^2 = G M_b/R_b$.
+
+% disk model
+The disk component is described by an exponential disk model where the surface density follows an exponential law, $\Sigma(r)/\Sigma_d = \e^{-r/R_d}$. The mass is then given by $M(r) = \int_0^r 2\pi r \Sigma(r) \d r$. For this axisymmetric system the circular velocity is given by \begin{equation}
+	\frac{v^2(y)}{\sigma_d^2} = 2 y^2 \qbracket{I_0(y) K_0(y) - I_1(y) K_1(y)}
+\end{equation} with the substitution $y=r/(2R_d)$. Here, $I_n(y)$ and $K_n(y)$ are the modified Bessel functions, $R_d$ is the length scale, $M_d = 2\pi \Sigma_d R_d^2$ is the total disk mass, what represents the mass scale, and $\sigma_d^2 = G M_d/R_d$ gives the scale factor for the circular velocity.
+
+% core and halo
+The above bulge and disk models describe the baryonic mass distribution on intermediate scales ($r \sim \SI{1}{\parsec}$ -- $\SI{10}{\kilo\parsec}$). In next, we continue to describe the Galactic core (e.g. sub-parsec) and halo ($\gtrsim\SI{10}{\kilo\parsec}$).
+
+% RAR
+Following \citet{2016arXiv160607040A}, then there is an underlying semi-degenerate DM mass distribution composed of massive fermions, being able to explain the Galactic core and halo at the same time without spoiling the intermediate baryonic matter. This DM model, hereafter RAR model, is described by four parameters: the fermion particle mass $m$, the central temperature parameter $\beta_0$, the central degeneracy parameter $\theta_0$ and the central cutoff parameter $W_0$. See \citet{2015MNRAS.451..622R,2016arXiv160607040A} and references therein for details about the RAR model. Note that solutions of the RAR model develop in the Galactic center a quantum core which acts as an alternative to the BH scenario in SgrA*. Here, we fix the fermion particle mass, $mc^2 = \SI{48}{\kilo\electronvolt}$, and the core mass, $M_c = M_{\rm core}$. The RAR core mass $M_c \equiv M(r_c)$ is given at the core radius $r_c$, what is defined at the first maximum in the DM rotation curve. The given core mass allows to constraint one of the three RAR configuration parameters, e.g. $\beta_0$ such that $\theta_0$ and $W_0$ remain free parameters.
+
+%the following set of equations \begin{align}
+	%\diff{}{r} \frac{M(r)}{M} &= \frac{r^2}{R^2} \frac{\rho(r)}{\rho}\\
+	%\diff{}{r} \nu(r) 				&= \frac12 \frac{R^2}{r^2} \qbracket{\frac{M(r)}{M} + \frac{r^3}{R^3} \frac{P(r)}{\rho c^2}} \qbracket[{\frac{r^3}{R^3}}]{1 - \frac{R}{r}\frac{M(r)}{M}}^{-1}
+%\end{align}
+
+% alternative core-halo composition
+For comparison, we consider alternatively a phenomenological DM model for the Galactic halo while the Galactic core is described by an independent compact object (e.g. BH) of the same core mass $M_{\rm core}$. The Keplerian trend at sub-parsec scales then is given by \begin{equation}
+	\frac{v^2(r)}{\sigma_c^2} = \frac{R}{r}
+\end{equation} with the gravitational constant $G$, an arbitrary length scale $R$ and the velocity length scale $\sigma_c^2 = G M_{\rm core}/R$.
+
+% NFW and Burkert
+Alternatively and for comparison, in this analysis we are interested in the NFW model given by the density \citep{1996ApJ...462..563N} \begin{equation}
+	\frac{\rho(r)}{\rho} = \frac{1}{\frac{r}{R}\qbracket{1 + \frac{r}{R}}^2}
+\end{equation} and the Burkert model given by \citep{1995ApJ...447L..25B} \begin{equation}
+	\frac{\rho(r)}{\rho} = \frac{1}{\qbracket{1 + \frac{r}{R^2}}\qbracket{1 + \frac{r^2}{R^2}}}
+\end{equation} Here, $\rho$ and $R$ are the scale factors for density and length.
+
+In sum, we consider three scenarios: \begin{enumerate}
+\item RAR + baryons
+\item NFW + baryons + core
+\item Burkert + baryons + core
+\end{enumerate} We remind that the RAR model contains information about the Galactic core while for the phenomenological DM models it is necessary to introduce additionally a compact object (e.g. BH). In all scenarios the core mass is set to $M_{\rm core} = \SI{4.2E6}{\Msun}$, the baryonic structure (inner bulge + main bulge + disk) is described by 6 parameters (2 for each component) and the DM component by 2 parameters. In total, the mass distribution of the Milky Way depends on 8 free parameters.
+
+% chi2
+Given the observables with uncertainties and the theoretical descriptions of the MW components we perform a least-square fitting by minimizing the $\chi^2$ value, \begin{equation}
+	\chi^2(\vec p) = \sum_{i=1}^N \frac{\qbracket{y_i - y(r_i, \vec p)}^2}{\Delta y_i}
+\end{equation} Here, $N=57$ is the number of constraints, $y_i$ is the given observable at radius $r_i$, $\Delta y_i$ is the corresponding uncertainty, $y(r_i, p)$ is the theoretical response value and $\vec p$ is the model parameter vector. The given constraints are a mix of velocity and mass observables.
+%See \cref{tbl:constraints} for a detailed list of the constraints.
+For every scenario the enclosed mass is simply a superposition of each component $j$, \begin{equation}
+	M(r) = \sum_{j} M_j(r)
+\end{equation} while the total circular velocity is given by \begin{equation}
+	v^2(r) = \sum_{j} v^2_j(r)
+\end{equation} Note that the set of components $j$ is different in each scenario. Given a scenario of MW components, the aim is to vary the corresponding parameter vector $\vec p$ in order to find a local minimum for $\chi^2$.
+
+
+
+
+% disk-halo entanglement
+%The rotation curve of \citet{2013PASJ...65..118S} provides convenient data with distinct features (e.g. maxima) to constrain the bulge parameters (for given disk, halo and core). The data at disk and inner halo scales, on the other hand, shows a nearly flat rotation curve what makes it more difficult to entangle the disk and halo.
+
+
